@@ -7,9 +7,9 @@ def is_integer(num):
 
 
 def prime(x):
-    for factor in range(2, x):
+    for factor in range(1, int(x/2), 2):
         div = x / factor
-        if is_integer(div):
+        if is_integer(div) and factor != 1:
             print('It is composite; can be divided by %d'%factor)
             return
     print('It is prime') 
@@ -20,4 +20,3 @@ print('Enter a number')
 i = input()
 fi = int(i)
 prime(fi)
-    
