@@ -12,9 +12,12 @@ def prime(x):
         if is_integer(div):
             print('It is composite; can be divided by %d'%factor)
             return
-    print('It is prime')
+    print('It is prime') 
 
 
-
-prime(1001)
+#Input source
+print('Enter a number')
+i = input()
+fi = int(i)
+prime(fi)
     
