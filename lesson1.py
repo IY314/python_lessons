@@ -1,22 +1,20 @@
-def is_integer(num):
-    if int(num) != num:
-        return False
-    else:
-        return True
-
-
-
 def prime(x):
-    for factor in range(1, int(x/2), 2):
-        div = x / factor
-        if is_integer(div) and factor != 1:
-            print('It is composite; can be divided by %d'%factor)
+    for factor in range(1, x // 2):
+        if not x % factor and factor != 1:
+            print(f'It is composite; can be divided by {factor}')
             return
-    print('It is prime') 
+    print('It is prime')
 
 
-#Input source
-print('Enter a number')
-i = input()
-fi = int(i)
-prime(fi)
+def main():
+    while True:
+        try:
+            i = int(input('Enter a number\n'))
+            break
+        except ValueError:
+            print('Invalid number')
+    prime(i)
+
+
+if __name__ == '__main__':
+    main()
